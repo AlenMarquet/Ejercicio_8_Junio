@@ -7,6 +7,8 @@ router.get('/detail/:id', moviesController.detail);
 router.get('/new', moviesController.new);
 router.get('/recommended', moviesController.recommended);
 router.post('/search', moviesController.search);
-
+router.get('/update/:id', moviesController.update);
+router.post('/modify/:id', moviesController.modify);
+router.delete('/delete/:id', moviesController.delete);
 
 module.exports = router;

@@ -13,9 +13,12 @@
       <li> Duración : <%= movieDetail.length %></li>
       <li> Fecha de estreno : <%= movieDetail.release_date %></li>
     </ul>
-    <form action="/movies/search" method="POST">
-      <button type="submit" action="" method="POST">Borrar</button>
-      <button type="submit">Modificar</button>
-  </form>
+    <form action="/movies/update/<%= movieDetail.id %> " method="GET">
+      <button type="submit" class="action-button">Corregir</button>
+      </form>
+      
+      <form action="/movies/delete/<%= movieDetail.id %>?_method=DELETE " method="POST">
+        <button type="submit" class="action-button delete">Borrar</button>
+        </form>
 </body>
 </html>
