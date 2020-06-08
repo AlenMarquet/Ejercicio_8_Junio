@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de peliculas</h1>
+    <ul>
+       <% moviesAll.forEach(movie => { %>
+        <li><a href="/movies/detail/<%= movie.id %> ">  <%= movie.title %></a> </li>
+     <% }) %>
+    </ul>
+
+    <form action="/movies/search" method="POST">
+        <label for="pelicula" class="form-label">Buscar Pelicula :</label>
+		<input type="text" id="pelicula" name="pelicula" placeholder="Ej: Mi pobre angelito">
+    
+        <button type="submit">Buscar</button>
+    </form>
+
+</body>
+</html>
